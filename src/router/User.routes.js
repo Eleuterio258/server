@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const verifyToken = require('../Middleware/ValidateToken');
+const verifyToken = require('../middleware/ValidateToken');
 const register = require('../controller/RegisterController');
 const user = require('../controller/UserController');
-const upLoadsProfile = require('../Lib/Multer').upLoadsProfile;
+const upLoadsProfile = require('../lib/Multer').upLoadsProfile;
 
 
 

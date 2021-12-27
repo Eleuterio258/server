@@ -4,7 +4,7 @@ const path = require('path');
 var storageProfile = multer.diskStorage({
 
     destination: (req, res, cb) => {
-        cb(null, 'src/Uploads/Profile')
+        cb(null, 'src/uploads/Profile')
     },
     filename: (req, file, cb) => {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
@@ -18,7 +18,7 @@ const upLoadsProfile = multer({ storage: storageProfile });
 var storageProducts = multer.diskStorage({
 
     destination: (req, res, cb) => {
-        cb(null, 'src/Uploads/Products')
+        cb(null, 'src/uploads/Products')
     },
     filename: (req, file, cb) => {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))

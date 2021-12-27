@@ -5,16 +5,16 @@ const path = require('path');
 require("dotenv/config")
 
 
-const routeAuth = require('./Router/Auth.routes');
-const routerUser = require('./Router/User.routes');
-const routerProduct = require('./Router/Product.routes');
-const routerCategory = require('./Router/Category.routes');
-const routerOrder = require('./Router/Order.routes');
+const routeAuth = require('./router/Auth.routes');
+const routerUser = require('./router/User.routes');
+const routerProduct = require('./router/Product.routes');
+const routerCategory = require('./router/Category.routes');
+const routerOrder = require('./router/Order.routes');
 
 const app = express();
 const server = require('http').createServer(app);
 module.exports.io = require('socket.io')(server);
-require('./Sockets/SocketOrderDelivery');
+require('./sockets/SocketOrderDelivery');
 
 
 app.use(express.json());
@@ -29,10 +29,9 @@ app.use('/api', routerCategory);
 app.use('/api', routerOrder);
 
 
-app.use(express.static(path.join(__dirname, 'Uploads/Profile')));
-app.use(express.static(path.join(__dirname, 'Uploads/Products')));
+app.use(express.static(path.join(__dirname, 'uploads/Profile')));
+app.use(express.static(path.join(__dirname, 'uploads/Products')));
 
-server.listen(process.env.APP_PORT, (err) => {
-    if (err) throw new Error(err);
-    console.log('server running in the port', process.env.APP_PORT);
-});
+
+
+module.exports= server;

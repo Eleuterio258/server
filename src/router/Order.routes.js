@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const orders = require('../controller/OrdersController');
 const client = require('../controller/ClientController');
-const verifyToken = require('../Middleware/ValidateToken');
+const verifyToken = require('../middleware/ValidateToken');
 
 
 

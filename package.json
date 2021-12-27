@@ -18,14 +18,22 @@
     "nodemon": "^2.0.15"
   },
   "name": "food",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "2.0.0",
+  "main": "app.js",
   "scripts": {
-    "start": "babel-node src/index.js",
-    "dev": "nodemon src/index.js --exec babel-node"
+    "start": "babel-node app.js",
+    "dev": "nodemon app.js --exec babel-node"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eleutério Fulaho Notico",
   "license": "ISC",
-  "description": ""
+  "description": "Food Delivery Api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eleuterio258/server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eleuterio258/server/issues"
+  },
+  "homepage": "https://github.com/Eleuterio258/server#readme"
 }

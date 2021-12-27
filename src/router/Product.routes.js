@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
 const product = require('../controller/ProductController');
-const  upLoadsProducts = require('../Lib/Multer').upLoadsProducts;
-const  verifyToken = require('../Middleware/ValidateToken');
+const  upLoadsProducts = require('../lib/Multer').upLoadsProducts;
+const  verifyToken = require('../middleware/ValidateToken');
 
 
 

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const category = require('../controller/CategoryController');
 const getAllDelivery = require('../controller/DeliveryController').getAllDelivery;
-const verifyToken = require('../Middleware/ValidateToken');
+const verifyToken = require('../middleware/ValidateToken');
 
 
 
